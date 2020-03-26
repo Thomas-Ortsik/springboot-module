@@ -1,0 +1,8 @@
+music:
+  songs:
+    - name: test1
+      genre: one
+    - name: test2
+      genre: two
+    - name: test3
+      genre: two
