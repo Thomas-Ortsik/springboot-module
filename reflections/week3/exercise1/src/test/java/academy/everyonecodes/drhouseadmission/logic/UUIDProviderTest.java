@@ -28,6 +28,13 @@ UUIDProvider provider;
     }
 
     @Test
+    void findUUIDWithNoPatient() {
+        String expected = null;
+        String result = provider.findUUID("Test");
+        Assertions.assertEquals(expected, result);
+    }
+
+    @Test
     void findUUIDWithKnownPatient() {
         Patient filler = new Patient("", "filler", "cough");
         provider.provideUUID(filler);

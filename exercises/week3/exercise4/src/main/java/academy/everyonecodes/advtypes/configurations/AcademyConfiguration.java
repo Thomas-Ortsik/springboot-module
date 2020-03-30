@@ -1,4 +1,4 @@
-package academy.everyonecodes.advtypes.config;
+package academy.everyonecodes.advtypes.configurations;
 
 import academy.everyonecodes.advtypes.domain.Academy;
 import org.springframework.boot.context.properties.ConfigurationProperties;
