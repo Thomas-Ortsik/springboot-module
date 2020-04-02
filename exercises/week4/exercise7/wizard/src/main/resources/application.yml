@@ -1,0 +1,4 @@
+server:
+  port: 9001
+url:
+  homeApp: http://localhost:9002/home

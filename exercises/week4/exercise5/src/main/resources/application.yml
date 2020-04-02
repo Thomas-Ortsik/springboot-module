@@ -1,0 +1,4 @@
+server:
+  port: 8081
+url:
+  interactions: http://localhost:8080/formula/

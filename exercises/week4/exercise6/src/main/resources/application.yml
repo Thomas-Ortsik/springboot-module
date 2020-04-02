@@ -1,0 +1,17 @@
+server:
+  port: 8501
+url:
+  marathon:
+    post: http://localhost:8500/runners
+    get: http://localhost:8500/runners/winner
+testcase:
+  runners:
+    - name: TestLast
+      duration: 999
+    - name: TestMiddle
+      duration: 500
+    - name: TestFirst
+      duration: 1
+  winner:
+    - name: TestFirst
+      duration: 1
