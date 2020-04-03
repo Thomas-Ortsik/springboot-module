@@ -1,5 +1,6 @@
 package academy.everyonecodes.drhouseadmission.logic;
 
+import academy.everyonecodes.drhouseadmission.client.DiagnosesClient;
 import academy.everyonecodes.drhouseadmission.domain.Patient;
 import org.springframework.stereotype.Service;
 
@@ -7,16 +8,20 @@ import java.util.Map;
 
 @Service
 public class Admission {
-    private UUIDProvider uuidProvider;
+    private final UUIDProvider uuidProvider;
+    private final DiagnosesClient diagnosesClient;
 
-    public Admission(UUIDProvider uuidProvider) {
+    public Admission(UUIDProvider uuidProvider, DiagnosesClient diagnosesClient) {
         this.uuidProvider = uuidProvider;
+        this.diagnosesClient = diagnosesClient;
     }
 
-    public Patient admit(Patient patient){
+    public Patient admit(Patient patient) {
         String patientName = patient.getName();
         uuidProvider.provideUUID(patient);
         Map<String, String> patients = uuidProvider.getCacheSnapshot();
-        return new Patient(patients.get(patientName), patientName, patient.getSymptoms());
+        patient = new Patient(patients.get(patientName), patientName, patient.getSymptoms());
+        diagnosesClient.send(patient);
+        return patient;
     }
 }
