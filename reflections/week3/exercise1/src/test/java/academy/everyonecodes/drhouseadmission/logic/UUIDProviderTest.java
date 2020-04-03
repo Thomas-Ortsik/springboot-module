@@ -22,9 +22,7 @@ UUIDProvider provider;
     void findUUIDWithNewPatient() {
         Patient input = new Patient("", "Test", "cough");
         provider.provideUUID(input);
-        String expected = "1";
-        String result = provider.findUUID("Test");
-        Assertions.assertEquals(expected, result);
+        assertNotNull(input.getUuid());
     }
 
     @Test
@@ -44,7 +42,7 @@ UUIDProvider provider;
         provider.provideUUID(input);
         Patient input3 = new Patient("", "Test", "cough");
         provider.provideUUID(input3);
-        String expected = "3";
+        String expected = input.getUuid();
         String result = provider.findUUID("Test");
         Assertions.assertEquals(expected, result);
     }

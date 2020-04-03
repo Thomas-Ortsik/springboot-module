@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
+import java.util.UUID;
 
 @Service
 public class UUIDProvider {
@@ -28,7 +29,8 @@ public class UUIDProvider {
         if (cache.containsKey(patientName)) {
             patient.setUuid(cache.get(patientName));
         } else {
-            patient.setUuid(String.valueOf(cache.size() + 1));
+            String uuid = UUID.randomUUID().toString();
+            patient.setUuid(uuid);
             cache.put(patient.getName(), patient.getUuid());
         }
     }
