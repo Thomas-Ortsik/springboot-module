@@ -1,0 +1,5 @@
+server:
+  port: 9000
+url:
+  users: http://localhost:9001/users/
+deliveryCost: 2.50

@@ -1,0 +1,10 @@
+server:
+  port: 9001
+users:
+  accounts:
+    - name: test1
+      email: test1@test.test
+      accountType: standard account
+    - name: test2
+      email: test2@test.test
+      accountType: premium account
