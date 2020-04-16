@@ -1,0 +1,10 @@
+server:
+  port: 9002
+hot:
+  movies:
+    - title: test1
+      synopsis: test1 synopsis
+    - title: test2
+      synopsis: test2 synopsis
+    - title: test3
+      synopsis: test3 synopsis

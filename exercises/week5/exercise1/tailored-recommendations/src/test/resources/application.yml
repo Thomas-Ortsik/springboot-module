@@ -1,0 +1,17 @@
+server:
+  port: 9001
+url: http://localhost:9001/tailoredrecommendations
+tailored:
+  recommendations:
+    - userUuid: 1
+      movie:
+        title: test
+        synopsis: testS
+    - userUuid: 2
+      movie:
+        title: test2
+        synopsis: test2S
+    - userUuid: 2
+      movie:
+        title: test3
+        synopsis: test3S
