@@ -38,9 +38,6 @@ public class MarathonTester {
     }
 
     public TestResult integrationTest() {
-        //if (client.getWinner() != null) {
-          //  return new TestResult("Error", "No winner should have been received in the first call");
-        //}
         runners.stream()
                 .forEach(runner -> client.postRunner(runner));
         if (client.getWinner().equals(winner)) {
