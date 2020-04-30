@@ -1,0 +1,7 @@
+server:
+  port: 8200
+
+usercredentials:
+  username: MadameD
+  password: boywithapple
+  authorities: ROLE_CUSTOMER
