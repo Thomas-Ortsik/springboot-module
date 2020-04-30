@@ -8,3 +8,11 @@ spring:
      ddl-auto: update
 server:
   port: 9004
+authorized-users:
+  accountants:
+    - username: walter
+      password: secret321
+      authorities: ROLE_ACCOUNTANT
+    - username: julia
+      password: secret123
+      authorities: ROLE_ACCOUNTANT

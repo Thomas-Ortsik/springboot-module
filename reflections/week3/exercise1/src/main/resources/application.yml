@@ -2,3 +2,8 @@ server:
   port: 9001
 url:
   diagnosis: http://localhost:9002
+spring:
+  security:
+    user:
+      name: drhousehospital
+      password: drhousehospital
