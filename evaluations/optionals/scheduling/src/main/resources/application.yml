@@ -1,0 +1,9 @@
+fixed-delay:
+  timer: 5000
+  message: Fixed delay message every 5 seconds
+fixed-rate:
+  timer: 2000
+  message: Fixed rate message every 2 seconds
+cron-message:
+  message: Cron message every interval
+  interval: "30 0/2 9-18 * * 1-5"
