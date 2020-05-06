@@ -13,8 +13,7 @@ public class Person {
     @NotBlank
     private String name;
 
-    @ManyToMany
-    @ElementCollection(fetch = FetchType.EAGER)
+    @ManyToMany(fetch = FetchType.EAGER)
     private List<Person> friends;
 
     public Person(@NotBlank String name, List<Person> friends) {
